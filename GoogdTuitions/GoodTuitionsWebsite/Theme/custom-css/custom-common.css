@@ -1,0 +1,34 @@
+﻿.hide {
+    display: none;
+}
+
+.signup-modal-footer {
+    border-top: 1px solid #E5E5E5;
+    margin-top: 0;
+    padding: 15px 0 0;
+    text-align: right;
+}
+
+.top-bar {
+    border-top: 1px solid #DDDDDD;
+    margin-top: 10px;
+}
+
+.center {
+    margin: 14% auto;
+}
+
+.body-content {
+    min-height: 400px;
+    background-color: white;
+}
+.img-loading {
+    left: 46%;
+    z-index: 1000;
+    position: fixed;
+    top: 32%;
+}
+
+.full-width {
+    width: 100%;
+}

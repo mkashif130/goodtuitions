@@ -1,0 +1,6 @@
+1- Signup + activation email + account activate via email + redirection to "Congratulation" Page after account activation.
+2- Login + Logout
+3- From login page "Request for Login page" sends in email. User can change password by following the links in email.
+4- User Should be able to change password once he is logged in, this time directly. no need for email (step 2)
+5- user should be able to view profile/edit profile with proper success and error messages.
+6- Home page with dummy data.

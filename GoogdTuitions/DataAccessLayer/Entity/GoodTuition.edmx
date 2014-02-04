@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TuitionModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="TuitionModelStoreContainer">
+          <EntitySet Name="cor_compaigns" EntityType="TuitionModel.Store.cor_compaigns" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="cor_leads" EntityType="TuitionModel.Store.cor_leads" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_cor_leads_cor_compaigns" Association="TuitionModel.Store.FK_cor_leads_cor_compaigns">
+            <End Role="cor_compaigns" EntitySet="cor_compaigns" />
+            <End Role="cor_leads" EntitySet="cor_leads" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="cor_compaigns">
+          <Key>
+            <PropertyRef Name="CampaignId" />
+          </Key>
+          <Property Name="CampaignId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CampaignTitle" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CampaignDescription" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="cor_leads">
+          <Key>
+            <PropertyRef Name="LeadId" />
+          </Key>
+          <Property Name="LeadId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="80" />
+          <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="80" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="80" />
+          <Property Name="EmailId" Type="nvarchar" Nullable="false" MaxLength="80" />
+          <Property Name="Mobile" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="Phone" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="Source" Type="nvarchar" MaxLength="500" />
+          <Property Name="CampaignId" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_cor_leads_cor_compaigns">
+          <End Role="cor_compaigns" Type="TuitionModel.Store.cor_compaigns" Multiplicity="1" />
+          <End Role="cor_leads" Type="TuitionModel.Store.cor_leads" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cor_compaigns">
+              <PropertyRef Name="CampaignId" />
+            </Principal>
+            <Dependent Role="cor_leads">
+              <PropertyRef Name="CampaignId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="P_Cor_Leads" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Mod" Type="int" Mode="In" />
+          <Parameter Name="FirstName" Type="nvarchar" Mode="In" />
+          <Parameter Name="LastName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Title" Type="nvarchar" Mode="In" />
+          <Parameter Name="EmailId" Type="nvarchar" Mode="In" />
+          <Parameter Name="Mobile" Type="nvarchar" Mode="In" />
+          <Parameter Name="Phone" Type="nvarchar" Mode="In" />
+          <Parameter Name="Source" Type="nvarchar" Mode="In" />
+          <Parameter Name="CampaignId" Type="int" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TuitionModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="TuitionEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="cor_compaigns" EntityType="TuitionModel.cor_compaigns" />
+          <EntitySet Name="cor_leads" EntityType="TuitionModel.cor_leads" />
+          <FunctionImport Name="P_Cor_Leads">
+            <Parameter Name="Mod" Mode="In" Type="Int32" />
+            <Parameter Name="FirstName" Mode="In" Type="String" />
+            <Parameter Name="LastName" Mode="In" Type="String" />
+            <Parameter Name="Title" Mode="In" Type="String" />
+            <Parameter Name="EmailId" Mode="In" Type="String" />
+            <Parameter Name="Mobile" Mode="In" Type="String" />
+            <Parameter Name="Phone" Mode="In" Type="String" />
+            <Parameter Name="Source" Mode="In" Type="String" />
+            <Parameter Name="CampaignId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <AssociationSet Name="FK_cor_leads_cor_compaigns" Association="TuitionModel.FK_cor_leads_cor_compaigns">
+            <End Role="cor_compaigns" EntitySet="cor_compaigns" />
+            <End Role="cor_leads" EntitySet="cor_leads" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="cor_compaigns">
+          <Key>
+            <PropertyRef Name="CampaignId" />
+          </Key>
+          <Property Name="CampaignId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CampaignTitle" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CampaignDescription" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="cor_leads" Relationship="TuitionModel.FK_cor_leads_cor_compaigns" FromRole="cor_compaigns" ToRole="cor_leads" />
+        </EntityType>
+        <EntityType Name="cor_leads">
+          <Key>
+            <PropertyRef Name="LeadId" />
+            <PropertyRef Name="CampaignId" />
+          </Key>
+          <Property Name="LeadId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="80" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="80" Unicode="true" FixedLength="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="80" Unicode="true" FixedLength="false" />
+          <Property Name="EmailId" Type="String" Nullable="false" MaxLength="80" Unicode="true" FixedLength="false" />
+          <Property Name="Mobile" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="Source" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="CampaignId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="cor_compaigns" Relationship="TuitionModel.FK_cor_leads_cor_compaigns" FromRole="cor_leads" ToRole="cor_compaigns" />
+        </EntityType>
+        <Association Name="FK_cor_leads_cor_compaigns">
+          <End Type="TuitionModel.cor_compaigns" Role="cor_compaigns" Multiplicity="1" />
+          <End Type="TuitionModel.cor_leads" Role="cor_leads" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cor_compaigns">
+              <PropertyRef Name="CampaignId" />
+            </Principal>
+            <Dependent Role="cor_leads">
+              <PropertyRef Name="CampaignId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TuitionModelStoreContainer" CdmEntityContainer="TuitionEntities">
+          <EntitySetMapping Name="cor_compaigns">
+            <EntityTypeMapping TypeName="TuitionModel.cor_compaigns">
+              <MappingFragment StoreEntitySet="cor_compaigns">
+                <ScalarProperty Name="CampaignId" ColumnName="CampaignId" />
+                <ScalarProperty Name="CampaignTitle" ColumnName="CampaignTitle" />
+                <ScalarProperty Name="CampaignDescription" ColumnName="CampaignDescription" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cor_leads">
+            <EntityTypeMapping TypeName="TuitionModel.cor_leads">
+              <MappingFragment StoreEntitySet="cor_leads">
+                <ScalarProperty Name="LeadId" ColumnName="LeadId" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="CampaignId" ColumnName="CampaignId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="P_Cor_Leads" FunctionName="TuitionModel.Store.P_Cor_Leads" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

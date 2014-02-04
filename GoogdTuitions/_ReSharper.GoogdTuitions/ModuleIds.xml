@@ -1,0 +1,6 @@
+<Modules>
+  <Module PersistentId="158662C8-C250-4C81-A295-6BF2194A350A" ModuleId="GoogdTuitions" />
+  <Module PersistentId="10163B57-24D3-442B-ABB2-33A5B737B64A" ModuleId="DataAccessLayer" />
+  <Module PersistentId="B7D0AE7E-7243-44BE-805F-06A1271FFB2F" ModuleId="BusinessLayer" />
+  <Module PersistentId="16286F45-3E81-4312-91CE-116EC18C0C5D" ModuleId="GoodTuitionsWebsite" />
+</Modules>

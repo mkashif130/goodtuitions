@@ -1,0 +1,9 @@
+﻿table.profileArea tr td {
+    line-height: 1.42857;
+    padding: 4px ;
+    vertical-align: middle;
+}
+#InputMemberSince {
+    padding-left: 12px;
+    font-weight: normal;
+}

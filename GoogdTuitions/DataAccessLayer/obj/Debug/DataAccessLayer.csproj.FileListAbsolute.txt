@@ -1,0 +1,4 @@
+C:\Users\Muhammad Arslan\Dropbox\Solution\GoogdTuitions\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Muhammad Arslan\Dropbox\Solution\GoogdTuitions\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Muhammad Arslan\Dropbox\Solution\GoogdTuitions\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\Muhammad Arslan\Dropbox\Solution\GoogdTuitions\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

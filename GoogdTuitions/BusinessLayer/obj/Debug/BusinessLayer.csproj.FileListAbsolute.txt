@@ -1,0 +1,7 @@
+C:\Users\Muhammad Arslan\Dropbox\Solution\GoogdTuitions\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\Muhammad Arslan\Dropbox\Solution\GoogdTuitions\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\Muhammad Arslan\Dropbox\Solution\GoogdTuitions\BusinessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Muhammad Arslan\Dropbox\Solution\GoogdTuitions\BusinessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Muhammad Arslan\Dropbox\Solution\GoogdTuitions\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\Muhammad Arslan\Dropbox\Solution\GoogdTuitions\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\Muhammad Arslan\Dropbox\Solution\GoogdTuitions\BusinessLayer\obj\Debug\BusinessLayer.pdb
