@@ -62,18 +62,10 @@ namespace BusinessLayer.Repository.Signup
 
                 return ResponseMessages.Created;
             }
-            catch(SqlException sqlException)
-            {
-                if (sqlException.Number==2627)
-                {
-                    throw new Exception("User Alread Exists");
-                }
-            }
             catch(Exception exception)
             {
-                throw new Exception(exception.Message);
+                throw new Exception(exception.Message,exception);
             }
-            return null;
         }
 
         public string Update(SignupEntity obj)

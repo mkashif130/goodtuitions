@@ -1,0 +1,7 @@
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\BusinessLayer\bin\Debug\BusinessLayer.dll
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\BusinessLayer\bin\Debug\BusinessLayer.pdb
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\BusinessLayer\bin\Debug\DataAccessLayer.dll
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\BusinessLayer\bin\Debug\DataAccessLayer.pdb
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\BusinessLayer\obj\Debug\BusinessLayer.dll
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\BusinessLayer\obj\Debug\BusinessLayer.pdb

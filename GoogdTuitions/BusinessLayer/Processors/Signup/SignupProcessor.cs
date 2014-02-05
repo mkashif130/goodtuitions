@@ -8,7 +8,6 @@ namespace BusinessLayer.Processors.Signup
         public string Save(SignupEntity signup)
         {
             var mainRepository = new SignupRepository();
-            mainRepository.Save(signup);
             return mainRepository.Save(signup);
         }
     }
