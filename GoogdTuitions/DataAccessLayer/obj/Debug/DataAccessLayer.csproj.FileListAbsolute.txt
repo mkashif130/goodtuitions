@@ -1,0 +1,4 @@
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
