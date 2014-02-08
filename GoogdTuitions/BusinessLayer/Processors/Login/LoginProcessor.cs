@@ -1,25 +1,22 @@
-﻿using BusinessLayer.Repository.Login;
+﻿using System.Net;
+using System.Net.Http;
+using BusinessLayer.Repository.Login;
+using BusinessLayer.Response;
 using BusinessLayer.Utils.Password;
-using DataAccessLayer.Response;
 
 namespace BusinessLayer.Processors.Login
 {
     public class LoginProcessor
     {
-        public ResponseMessages Login(string userId, string password)
+        public HttpResponseMessage Login(string userId, string password)
         {
             var loginRepository = new LoginRepository();
-            var resp = new ResponseMessages();
             var login = loginRepository.GetSingle(userId);
             if (login != null && (login.PasswordHash != null && (login.PasswordHash.Equals(PasswordGenerator.EncryptPassword(password, login.PasswordSalt)))))
             {
-                resp.Message = ResponseMessages.Success;
+                return new HttpResponseMessage(HttpStatusCode.OK);
             }
-            else
-            {
-                resp.Message = ResponseMessages.Error;
-            }
-            return resp;
+            return login == null ? HttpExceptionResponse.UserNotFound : HttpExceptionResponse.InvalidPassword;
         }
     }
 }

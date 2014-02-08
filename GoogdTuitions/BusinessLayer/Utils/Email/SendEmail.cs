@@ -14,11 +14,11 @@ namespace BusinessLayer.Utils.Email
 
         public static bool Send(String emailTemplate, String emailTo, String subject)
         {
-            String from = AppConfigProperty.GetStringProperty(AppConfigProperty.TuitionMailFrom);
-            String password = AppConfigProperty.GetStringProperty(AppConfigProperty.TuitionMailPassword);
-            String host = AppConfigProperty.GetStringProperty(AppConfigProperty.TuitionMailHost);
-            String name = AppConfigProperty.GetStringProperty(AppConfigProperty.TuitionMailName);
-            String port = AppConfigProperty.GetStringProperty(AppConfigProperty.TuitionMailPort);
+            var from = AppConfigProperty.GetStringProperty(AppConfigProperty.TuitionMailFrom);
+            var password = AppConfigProperty.GetStringProperty(AppConfigProperty.TuitionMailPassword);
+            var host = AppConfigProperty.GetStringProperty(AppConfigProperty.TuitionMailHost);
+            var name = AppConfigProperty.GetStringProperty(AppConfigProperty.TuitionMailName);
+            var port = AppConfigProperty.GetStringProperty(AppConfigProperty.TuitionMailPort);
             try
             {
                 var mail = new MailMessage {From = new MailAddress(@from, name)};

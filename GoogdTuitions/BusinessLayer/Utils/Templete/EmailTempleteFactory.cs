@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using DataAccessLayer.Email;
+using DataAccessLayer.Response;
 
 namespace BusinessLayer.Utils.Templete
 {
@@ -16,13 +16,11 @@ namespace BusinessLayer.Utils.Templete
         public static string GetEmailTemplate(EmailParams emailParams)
         {
             if (emailParams is SignupEmailParms)
-            {
                 return GetSignupMailTemplate(emailParams);
-            }
             if (emailParams is SubscriptionParams)
-            {
                 return GetSubscriptionTemplate(emailParams);
-            }
+            if (emailParams is ForgotPasswordParams)
+               return GetForgotPasswordTemplate(emailParams);
             return String.Empty;
         }
         private static String GetSignupMailTemplate(EmailParams emailParams)
@@ -33,21 +31,23 @@ namespace BusinessLayer.Utils.Templete
         {
             return GetTemplate("/Template/SubscriptionTemplate.htm",emailParams);
         }
-
+        private static string GetForgotPasswordTemplate(EmailParams emailParams)
+        {
+            return GetTemplate("/Template/ForgotPasswordTemplate.html", emailParams);
+        }
         private static string GetTemplate(String templateFileName, EmailParams emailParams)
         {
             try
             {
-                String filePath = System.Web.HttpContext.Current.Server.MapPath(templateFileName);
-                StreamReader streamReader = File.OpenText(filePath);
-                String contents = streamReader.ReadToEnd();
+                var filePath = System.Web.HttpContext.Current.Server.MapPath(templateFileName);
+                var streamReader = File.OpenText(filePath);
+                var contents = streamReader.ReadToEnd();
                 contents = ReplaceParams(contents, emailParams);
                 return contents;
             }
             catch (Exception)
             {
-                
-                throw;
+                return ResponseMessages.Error;
             }
         }
 

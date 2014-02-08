@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Globalization;
+using BusinessLayer.Utils.ExceptionHandling;
 using DataAccessLayer.Signup;
 using System.Data.SqlClient;
 using System.Collections.Generic;
@@ -64,7 +65,7 @@ namespace BusinessLayer.Repository.Signup
             }
             catch(Exception exception)
             {
-                throw new Exception(exception.Message,exception);
+                return CustomException.CreateException(exception);
             }
         }
 
