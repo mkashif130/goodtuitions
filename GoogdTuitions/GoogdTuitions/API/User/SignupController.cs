@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Net;
 using System.Net.Http;
 using BusinessLayer.Processors.Signup;
+using BusinessLayer.Response;
 using DataAccessLayer.Signup;
 using System.Collections.Generic;
 using System.Web.Http;
@@ -27,21 +27,16 @@ namespace GoogdTuitions.API.User
         // POST api/<controller>
         [HttpPost]
         [ActionName("AddNewUser")]
-        public HttpResponseMessage AddNewUser([FromBody]SignupEntity signup)
+        public HttpResponseMessage PostAddNewUser([FromBody]SignupEntity signup)
         {
-            var processor = new SignupProcessor();
             try
             {
-                processor.Save(signup);
-                return new HttpResponseMessage(HttpStatusCode.Created);
+                var processor = new SignupProcessor();
+                return processor.Save(signup);
             }
-            catch (Exception exception)
+            catch (Exception)
             {
-                var resp = new HttpResponseMessage(HttpStatusCode.BadRequest)
-                               {
-                                   Content = new StringContent(exception.ToString())
-                               };
-                throw new HttpResponseException(resp);
+                return HttpExceptionResponse.UnknownError;
             }
         }
 

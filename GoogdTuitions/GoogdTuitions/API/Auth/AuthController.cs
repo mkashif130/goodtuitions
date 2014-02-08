@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Net.Http;
 using System.Web.Http;
-using System.Web.Http.Results;
 using BusinessLayer.Processors.Login;
+using BusinessLayer.Response;
 using DataAccessLayer.Login;
-using DataAccessLayer.Response;
 
 namespace GoogdTuitions.API.Auth
 {
@@ -12,7 +13,7 @@ namespace GoogdTuitions.API.Auth
         // GET api/<controller>
         public IEnumerable<string> Get()
         {
-            return new [] { "value1", "value2" };
+            return new[] { "value1", "value2" };
         }
 
         // GET api/<controller>/5
@@ -24,10 +25,17 @@ namespace GoogdTuitions.API.Auth
         // POST api/<controller>
         [HttpPost]
         [ActionName("GetLogin")]
-        public JsonResult<ResponseMessages> Post([FromBody]LoginEntity login)
+        public HttpResponseMessage PostLogin([FromBody]LoginEntity login)
         {
-            var loginProcessor = new LoginProcessor();
-            return Json(loginProcessor.Login(login.EmailAddress, login.Password));
+            try
+            {
+                var loginProcessor = new LoginProcessor();
+                return loginProcessor.Login(login.EmailAddress, login.Password);
+            }
+            catch(Exception)
+            {
+                return HttpExceptionResponse.UnknownError;
+            }
         }
 
         // PUT api/<controller>/5

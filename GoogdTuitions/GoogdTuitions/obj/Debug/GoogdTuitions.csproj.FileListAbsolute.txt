@@ -20,3 +20,25 @@ C:\Users\Muhammad Arslan\Dropbox\Solution\GoogdTuitions\GoogdTuitions\bin\System
 C:\Users\Muhammad Arslan\Dropbox\Solution\GoogdTuitions\GoogdTuitions\obj\Debug\GoogdTuitions.csprojResolveAssemblyReference.cache
 C:\Users\Muhammad Arslan\Dropbox\Solution\GoogdTuitions\GoogdTuitions\obj\Debug\GoogdTuitions.dll
 C:\Users\Muhammad Arslan\Dropbox\Solution\GoogdTuitions\GoogdTuitions\obj\Debug\GoogdTuitions.pdb
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoogdTuitions\bin\GoogdTuitions.dll.config
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoogdTuitions\bin\GoogdTuitions.dll
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoogdTuitions\bin\GoogdTuitions.pdb
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoogdTuitions\bin\BusinessLayer.dll
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoogdTuitions\bin\DataAccessLayer.dll
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoogdTuitions\bin\Newtonsoft.Json.dll
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoogdTuitions\bin\System.Net.Http.Formatting.dll
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoogdTuitions\bin\System.Web.Cors.dll
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoogdTuitions\bin\System.Web.Http.Cors.dll
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoogdTuitions\bin\System.Web.Http.dll
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoogdTuitions\bin\System.Web.Http.WebHost.dll
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoogdTuitions\bin\WebApiContrib.Formatting.Jsonp.dll
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoogdTuitions\bin\BusinessLayer.pdb
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoogdTuitions\bin\DataAccessLayer.pdb
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoogdTuitions\bin\Newtonsoft.Json.xml
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoogdTuitions\bin\System.Net.Http.Formatting.xml
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoogdTuitions\bin\System.Web.Http.xml
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoogdTuitions\bin\System.Web.Http.Cors.xml
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoogdTuitions\bin\System.Web.Http.WebHost.xml
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoogdTuitions\obj\Debug\GoogdTuitions.csprojResolveAssemblyReference.cache
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoogdTuitions\obj\Debug\GoogdTuitions.dll
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoogdTuitions\obj\Debug\GoogdTuitions.pdb

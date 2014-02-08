@@ -85,11 +85,13 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Template\ForgotPasswordTemplate.html" />
     <Content Include="Template\SignupTemplate.htm" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API\Auth\AuthController.cs" />
+    <Compile Include="API\Auth\VerificationTokenController.cs" />
     <Compile Include="API\ComingSoonController.cs" />
     <Compile Include="API\User\ProfileController.cs" />
     <Compile Include="API\User\SignupController.cs" />
