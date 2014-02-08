@@ -1,0 +1,12 @@
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoodTuitionsWebsite\bin\GoodTuitionsWebsite.dll.config
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoodTuitionsWebsite\bin\GoodTuitionsWebsite.dll
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoodTuitionsWebsite\bin\GoodTuitionsWebsite.pdb
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoodTuitionsWebsite\bin\Newtonsoft.Json.dll
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoodTuitionsWebsite\bin\System.Net.Http.Formatting.dll
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoodTuitionsWebsite\bin\System.Web.Http.dll
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoodTuitionsWebsite\bin\WebApiContrib.Formatting.Jsonp.dll
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoodTuitionsWebsite\bin\Newtonsoft.Json.xml
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoodTuitionsWebsite\bin\System.Net.Http.Formatting.xml
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoodTuitionsWebsite\bin\System.Web.Http.xml
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoodTuitionsWebsite\obj\Debug\GoodTuitionsWebsite.dll
+F:\Professional Development\Goog Tuitions\goodtuitions\GoogdTuitions\GoodTuitionsWebsite\obj\Debug\GoodTuitionsWebsite.pdb
